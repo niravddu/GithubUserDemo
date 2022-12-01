@@ -1,0 +1,91 @@
+//
+//  UserDetailsViewController.swift
+//  API Demo
+//
+//  Created by Parth Patel on 18/11/22.
+//
+
+import UIKit
+
+class UserDetailsViewController: UIViewController {
+
+    //MARK: - All Outlets
+    @IBOutlet weak var ibProfileImageView: LazyImageView!
+    @IBOutlet weak var lblNameTitle: UILabel!
+    @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var lblCompanyTitle: UILabel!
+    @IBOutlet weak var lblCompany: UILabel!
+    @IBOutlet weak var lblBlogTitle: UILabel!
+    @IBOutlet weak var lblBlog: UILabel!
+    @IBOutlet weak var lblFollowersTitle: UILabel!
+    @IBOutlet weak var lblFollowers: UILabel!
+    @IBOutlet weak var lblFollowingTitle: UILabel!
+    @IBOutlet weak var lblFollowing: UILabel!
+    @IBOutlet weak var lblNotesTitle: UILabel!
+    @IBOutlet weak var txtNotes: UITextView!
+    @IBOutlet weak var ibSaveBtn: UIButton!
+    
+    //MARK: - All Properties and Variables
+    var currentSelectedUserID = ""
+    private var vm: UserDetailsViewModel?
+    private let placeHolder = #imageLiteral(resourceName: "userProfile")
+    
+    //MARK: - Page Life Cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.initViewModel()
+        self.themeConfig()
+        self.vm?.getUserDetails(self.currentSelectedUserID)
+        self.vm?.reloadData = {
+            self.setData()
+        }
+    }
+    
+    //MARK: - All Actions
+    @IBAction func btnSave(_ sender: UIButton) {
+    }
+    
+    //MARK: - Self Calling Methods
+    private func initViewModel() {
+        self.vm = UserDetailsViewModel(self)
+    }
+    
+    private func themeConfig() {
+        self.ibProfileImageView.layer.cornerRadius = self.ibProfileImageView.frame.width/2
+        self.txtNotes.layer.cornerRadius = 10
+        self.txtNotes.layer.borderWidth = 1
+        self.txtNotes.layer.borderColor = UIColor.gray.cgColor
+        self.ibSaveBtn.layer.cornerRadius = self.ibSaveBtn.frame.height/2
+    }
+    
+    private func setData() {
+        if let profileImageURL = URL(string: self.vm?.objUserDetailsModel?.avatarURL ?? "")  {
+            self.ibProfileImageView.loadImage(profileImageURL, placeHolderImage: self.placeHolder)
+        }
+        
+        self.lblName.text = self.vm?.objUserDetailsModel?.getName()
+        self.lblCompany.text = self.vm?.objUserDetailsModel?.company ?? "-"
+        self.lblBlog.text = self.vm?.objUserDetailsModel?.blog ?? "-"
+        self.lblFollowers.text = self.vm?.objUserDetailsModel?.getFollowers()
+        self.lblFollowing.text = self.vm?.objUserDetailsModel?.getFollowing()
+        
+        self.lblNameTitle.text = "Name:"
+        self.lblCompanyTitle.text = "Company:"
+        self.lblBlogTitle.text = "Blog:"
+        self.lblFollowersTitle.text = "Followers:"
+        self.lblFollowersTitle.text = "Followers:"
+        self.lblNotesTitle.text = "Notes:"
+        
+        self.txtNotes.text = ""
+    }
+    
+    //MARK: - Segue Method
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    }
+}
+
+//MARK: -
+//MARK: - All Extensions
+//MARK: -
+
+//MARK: - 

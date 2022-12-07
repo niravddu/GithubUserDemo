@@ -43,6 +43,19 @@ class UserDetailsViewController: UIViewController {
     
     //MARK: - All Actions
     @IBAction func btnSave(_ sender: UIButton) {
+        var title = ""
+        var message = ""
+        if CoreDataManager.shared.saveNote(self.currentSelectedUserID, notes: self.txtNotes.text) {
+            title = "Success"
+            message = "Note saved."
+        } else {
+            title = "Alert"
+            message = "Note not saved."
+        }
+        
+        let objAlertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        objAlertController.addAction(UIAlertAction(title: "Ok", style: .default))
+        self.present(objAlertController, animated: true)
     }
     
     //MARK: - Self Calling Methods
@@ -60,7 +73,7 @@ class UserDetailsViewController: UIViewController {
     
     private func setData() {
         if let profileImageURL = URL(string: self.vm?.objUserDetailsModel?.avatarURL ?? "")  {
-            self.ibProfileImageView.loadImage(profileImageURL, placeHolderImage: self.placeHolder)
+            self.ibProfileImageView.loadImage(profileImageURL, placeHolderImage: self.placeHolder, isInvertedImage: false)
         }
         
         self.lblName.text = self.vm?.objUserDetailsModel?.getName()
@@ -76,7 +89,7 @@ class UserDetailsViewController: UIViewController {
         self.lblFollowersTitle.text = "Followers:"
         self.lblNotesTitle.text = "Notes:"
         
-        self.txtNotes.text = ""
+        self.txtNotes.text = CoreDataManager.shared.getNote(self.currentSelectedUserID)?.notes ?? ""
     }
     
     //MARK: - Segue Method

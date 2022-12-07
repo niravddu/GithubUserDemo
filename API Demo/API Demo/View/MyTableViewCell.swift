@@ -37,9 +37,9 @@ class MyTableViewCell: UITableViewCell {
         self.ibProfileImageView.layer.cornerRadius = self.ibProfileImageShadowView.frame.size.height/2
     }
     
-    func configMyTableViewCell(_ objUserInfoModel: UserInfoModel?) {
+    func configMyTableViewCell(_ objUserInfoModel: UserInfoModel?, indexPath: IndexPath) {
         if let profileImageURL = URL(string: objUserInfoModel?.avatarURL ?? "")  {
-            self.ibProfileImageView.loadImage(profileImageURL, placeHolderImage: self.placeHolder)
+            self.ibProfileImageView.loadImage(profileImageURL, placeHolderImage: self.placeHolder, isInvertedImage: (indexPath.row % 4) == 0)
         }
         self.lblUserName.text = objUserInfoModel?.login ?? ""
         self.lblUserDetailsURL.text = objUserInfoModel?.htmlURL ?? ""

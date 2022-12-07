@@ -37,4 +37,10 @@ extension UIViewController {
             }
         }
     }
+    
+    func showAlertView(_ title: String, message: String, buttonName: String) {
+        let objAlertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        objAlertController.addAction(UIAlertAction(title: "Ok", style: .default))
+        self.present(objAlertController, animated: true)
+    }
 }

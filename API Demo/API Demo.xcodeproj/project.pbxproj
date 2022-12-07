@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		51070A64292B396400D597CA /* WebServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51070A63292B396400D597CA /* WebServiceManager.swift */; };
+		510C16AA293F1A8F0084F215 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510C16A9293F1A8F0084F215 /* CoreDataManager.swift */; };
 		51337EDA2927649700365F7F /* UserDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51337ED92927649700365F7F /* UserDetailsModel.swift */; };
 		51337EE1292764EB00365F7F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51337EE0292764EB00365F7F /* UIViewExtension.swift */; };
 		51337EE32927686500365F7F /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51337EE22927686500365F7F /* UserDetailsViewController.swift */; };
@@ -22,10 +23,27 @@
 		5159FC322926385C0053B10E /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5159FC312926385C0053B10E /* UserInfoModel.swift */; };
 		5159FC34292638900053B10E /* UserInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5159FC33292638900053B10E /* UserInfoViewModel.swift */; };
 		5159FC3629264A6C0053B10E /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5159FC3529264A6C0053B10E /* MyTableViewCell.swift */; };
+		517E7603294074EF0090C033 /* ConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517E7602294074EF0090C033 /* ConnectivityManager.swift */; };
+		51EF532329409D85007F4F14 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EF532229409D85007F4F14 /* Reachability.swift */; };
+		FAF2497F2940AB9600D66356 /* MultipleLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF249732940AB9600D66356 /* MultipleLines.swift */; };
+		FAF249802940AB9600D66356 /* WindlessContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF249742940AB9600D66356 /* WindlessContext.swift */; };
+		FAF249812940AB9600D66356 /* WindlessLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF249752940AB9600D66356 /* WindlessLayer.swift */; };
+		FAF249822940AB9600D66356 /* Windless.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF249762940AB9600D66356 /* Windless.swift */; };
+		FAF249832940AB9600D66356 /* UIView+Windless.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF249772940AB9600D66356 /* UIView+Windless.swift */; };
+		FAF249842940AB9600D66356 /* WindlessOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF249782940AB9600D66356 /* WindlessOptions.swift */; };
+		FAF249852940AB9600D66356 /* AnimationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF249792940AB9600D66356 /* AnimationFactory.swift */; };
+		FAF249862940AB9600D66356 /* CAMediaTimingFunction+Windless.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2497A2940AB9600D66356 /* CAMediaTimingFunction+Windless.swift */; };
+		FAF249872940AB9600D66356 /* TransitionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2497B2940AB9600D66356 /* TransitionFactory.swift */; };
+		FAF249882940AB9600D66356 /* Maker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2497C2940AB9600D66356 /* Maker.swift */; };
+		FAF249892940AB9600D66356 /* WindlessConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2497D2940AB9600D66356 /* WindlessConfiguration.swift */; };
+		FAF2498A2940AB9600D66356 /* Constant+Windless.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2497E2940AB9600D66356 /* Constant+Windless.swift */; };
+		FAF2498C2940ABA200D66356 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2498B2940ABA200D66356 /* UIImageExtension.swift */; };
+		FAF249962940B29600D66356 /* UserManageCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAF249942940B29600D66356 /* UserManageCoreDataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		51070A63292B396400D597CA /* WebServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceManager.swift; sourceTree = "<group>"; };
+		510C16A9293F1A8F0084F215 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		51337ED92927649700365F7F /* UserDetailsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailsModel.swift; sourceTree = "<group>"; };
 		51337EE0292764EB00365F7F /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		51337EE22927686500365F7F /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +60,22 @@
 		5159FC312926385C0053B10E /* UserInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoModel.swift; sourceTree = "<group>"; };
 		5159FC33292638900053B10E /* UserInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewModel.swift; sourceTree = "<group>"; };
 		5159FC3529264A6C0053B10E /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
+		517E7602294074EF0090C033 /* ConnectivityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectivityManager.swift; sourceTree = "<group>"; };
+		51EF532229409D85007F4F14 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		FAF249732940AB9600D66356 /* MultipleLines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleLines.swift; sourceTree = "<group>"; };
+		FAF249742940AB9600D66356 /* WindlessContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindlessContext.swift; sourceTree = "<group>"; };
+		FAF249752940AB9600D66356 /* WindlessLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindlessLayer.swift; sourceTree = "<group>"; };
+		FAF249762940AB9600D66356 /* Windless.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Windless.swift; sourceTree = "<group>"; };
+		FAF249772940AB9600D66356 /* UIView+Windless.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Windless.swift"; sourceTree = "<group>"; };
+		FAF249782940AB9600D66356 /* WindlessOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindlessOptions.swift; sourceTree = "<group>"; };
+		FAF249792940AB9600D66356 /* AnimationFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationFactory.swift; sourceTree = "<group>"; };
+		FAF2497A2940AB9600D66356 /* CAMediaTimingFunction+Windless.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CAMediaTimingFunction+Windless.swift"; sourceTree = "<group>"; };
+		FAF2497B2940AB9600D66356 /* TransitionFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionFactory.swift; sourceTree = "<group>"; };
+		FAF2497C2940AB9600D66356 /* Maker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Maker.swift; sourceTree = "<group>"; };
+		FAF2497D2940AB9600D66356 /* WindlessConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindlessConfiguration.swift; sourceTree = "<group>"; };
+		FAF2497E2940AB9600D66356 /* Constant+Windless.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Constant+Windless.swift"; sourceTree = "<group>"; };
+		FAF2498B2940ABA200D66356 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		FAF249952940B29600D66356 /* NotesCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NotesCoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +120,9 @@
 		51337EDE292764CC00365F7F /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				517E7602294074EF0090C033 /* ConnectivityManager.swift */,
+				510C16A9293F1A8F0084F215 /* CoreDataManager.swift */,
+				51EF532229409D85007F4F14 /* Reachability.swift */,
 				51070A63292B396400D597CA /* WebServiceManager.swift */,
 			);
 			path = Utility;
@@ -94,6 +131,7 @@
 		51337EDF292764D900365F7F /* All Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				FAF2498B2940ABA200D66356 /* UIImageExtension.swift */,
 				51337EEA2927C52800365F7F /* UIViewControllerExtensions.swift */,
 				51337EE0292764EB00365F7F /* UIViewExtension.swift */,
 			);
@@ -103,6 +141,7 @@
 		51337EE62927B0F500365F7F /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				FAF249722940AB7D00D66356 /* Windless */,
 				51337EE72927B10100365F7F /* LazyImageView.swift */,
 			);
 			path = Helper;
@@ -127,6 +166,7 @@
 		5159FC1A2925F7AA0053B10E /* API Demo */ = {
 			isa = PBXGroup;
 			children = (
+				FAF2498D2940B1F000D66356 /* Core data DB */,
 				51337EE62927B0F500365F7F /* Helper */,
 				51337EDF292764D900365F7F /* All Extensions */,
 				51337EDE292764CC00365F7F /* Utility */,
@@ -140,6 +180,33 @@
 				5159FC292925F7AC0053B10E /* Info.plist */,
 			);
 			path = "API Demo";
+			sourceTree = "<group>";
+		};
+		FAF249722940AB7D00D66356 /* Windless */ = {
+			isa = PBXGroup;
+			children = (
+				FAF249792940AB9600D66356 /* AnimationFactory.swift */,
+				FAF2497A2940AB9600D66356 /* CAMediaTimingFunction+Windless.swift */,
+				FAF2497E2940AB9600D66356 /* Constant+Windless.swift */,
+				FAF2497C2940AB9600D66356 /* Maker.swift */,
+				FAF249732940AB9600D66356 /* MultipleLines.swift */,
+				FAF2497B2940AB9600D66356 /* TransitionFactory.swift */,
+				FAF249772940AB9600D66356 /* UIView+Windless.swift */,
+				FAF249762940AB9600D66356 /* Windless.swift */,
+				FAF2497D2940AB9600D66356 /* WindlessConfiguration.swift */,
+				FAF249742940AB9600D66356 /* WindlessContext.swift */,
+				FAF249752940AB9600D66356 /* WindlessLayer.swift */,
+				FAF249782940AB9600D66356 /* WindlessOptions.swift */,
+			);
+			path = Windless;
+			sourceTree = "<group>";
+		};
+		FAF2498D2940B1F000D66356 /* Core data DB */ = {
+			isa = PBXGroup;
+			children = (
+				FAF249942940B29600D66356 /* UserManageCoreDataModel.xcdatamodeld */,
+			);
+			path = "Core data DB";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,15 +282,32 @@
 			files = (
 				5159FC202925F7AA0053B10E /* UserListViewController.swift in Sources */,
 				5159FC34292638900053B10E /* UserInfoViewModel.swift in Sources */,
+				FAF249822940AB9600D66356 /* Windless.swift in Sources */,
 				5159FC322926385C0053B10E /* UserInfoModel.swift in Sources */,
+				FAF2498A2940AB9600D66356 /* Constant+Windless.swift in Sources */,
+				FAF2497F2940AB9600D66356 /* MultipleLines.swift in Sources */,
+				FAF249962940B29600D66356 /* UserManageCoreDataModel.xcdatamodeld in Sources */,
+				FAF249862940AB9600D66356 /* CAMediaTimingFunction+Windless.swift in Sources */,
+				FAF249892940AB9600D66356 /* WindlessConfiguration.swift in Sources */,
+				FAF249852940AB9600D66356 /* AnimationFactory.swift in Sources */,
+				517E7603294074EF0090C033 /* ConnectivityManager.swift in Sources */,
 				51337EEB2927C52800365F7F /* UIViewControllerExtensions.swift in Sources */,
 				5159FC1C2925F7AA0053B10E /* AppDelegate.swift in Sources */,
+				FAF249882940AB9600D66356 /* Maker.swift in Sources */,
 				5159FC3629264A6C0053B10E /* MyTableViewCell.swift in Sources */,
 				51337EE82927B10100365F7F /* LazyImageView.swift in Sources */,
+				FAF249872940AB9600D66356 /* TransitionFactory.swift in Sources */,
+				FAF249802940AB9600D66356 /* WindlessContext.swift in Sources */,
+				FAF249832940AB9600D66356 /* UIView+Windless.swift in Sources */,
+				FAF2498C2940ABA200D66356 /* UIImageExtension.swift in Sources */,
+				FAF249842940AB9600D66356 /* WindlessOptions.swift in Sources */,
+				510C16AA293F1A8F0084F215 /* CoreDataManager.swift in Sources */,
 				51070A64292B396400D597CA /* WebServiceManager.swift in Sources */,
+				FAF249812940AB9600D66356 /* WindlessLayer.swift in Sources */,
 				51337EE529278DEC00365F7F /* UserDetailsViewModel.swift in Sources */,
 				51337EE1292764EB00365F7F /* UIViewExtension.swift in Sources */,
 				51337EDA2927649700365F7F /* UserDetailsModel.swift in Sources */,
+				51EF532329409D85007F4F14 /* Reachability.swift in Sources */,
 				51337EE32927686500365F7F /* UserDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,6 +455,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VYLGU5X55D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "API Demo/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -378,6 +463,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -398,6 +484,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VYLGU5X55D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "API Demo/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -405,6 +492,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -440,6 +528,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FAF249942940B29600D66356 /* UserManageCoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FAF249952940B29600D66356 /* NotesCoreDataModel.xcdatamodel */,
+			);
+			currentVersion = FAF249952940B29600D66356 /* NotesCoreDataModel.xcdatamodel */;
+			name = UserManageCoreDataModel.xcdatamodeld;
+			path = ../../../../../../Downloads/UserManageCoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5159FC102925F7AA0053B10E /* Project object */;
 }

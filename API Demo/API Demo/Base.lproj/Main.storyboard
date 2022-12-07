@@ -154,6 +154,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="ibContainerView" destination="nBc-XF-sQH" id="r18-2K-xuB"/>
+                                            <outlet property="ibNoteImageView" destination="70B-Na-iFC" id="hxu-EL-OSu"/>
                                             <outlet property="ibProfileImageShadowView" destination="vKr-pG-kAV" id="ano-k1-6D4"/>
                                             <outlet property="ibProfileImageView" destination="GFL-6N-Xui" id="dwf-3f-NjB"/>
                                             <outlet property="ibShadowView" destination="L44-mR-s0q" id="xmS-gM-OET"/>

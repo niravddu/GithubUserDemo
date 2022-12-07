@@ -23,6 +23,7 @@
 		5159FC322926385C0053B10E /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5159FC312926385C0053B10E /* UserInfoModel.swift */; };
 		5159FC34292638900053B10E /* UserInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5159FC33292638900053B10E /* UserInfoViewModel.swift */; };
 		5159FC3629264A6C0053B10E /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5159FC3529264A6C0053B10E /* MyTableViewCell.swift */; };
+		5170C6872940B527005A1208 /* UserManageCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5170C6852940B527005A1208 /* UserManageCoreDataModel.xcdatamodeld */; };
 		517E7603294074EF0090C033 /* ConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517E7602294074EF0090C033 /* ConnectivityManager.swift */; };
 		51EF532329409D85007F4F14 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EF532229409D85007F4F14 /* Reachability.swift */; };
 		FAF2497F2940AB9600D66356 /* MultipleLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF249732940AB9600D66356 /* MultipleLines.swift */; };
@@ -38,7 +39,6 @@
 		FAF249892940AB9600D66356 /* WindlessConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2497D2940AB9600D66356 /* WindlessConfiguration.swift */; };
 		FAF2498A2940AB9600D66356 /* Constant+Windless.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2497E2940AB9600D66356 /* Constant+Windless.swift */; };
 		FAF2498C2940ABA200D66356 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2498B2940ABA200D66356 /* UIImageExtension.swift */; };
-		FAF249962940B29600D66356 /* UserManageCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAF249942940B29600D66356 /* UserManageCoreDataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +60,7 @@
 		5159FC312926385C0053B10E /* UserInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoModel.swift; sourceTree = "<group>"; };
 		5159FC33292638900053B10E /* UserInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewModel.swift; sourceTree = "<group>"; };
 		5159FC3529264A6C0053B10E /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
+		5170C6862940B527005A1208 /* NotesCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NotesCoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		517E7602294074EF0090C033 /* ConnectivityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectivityManager.swift; sourceTree = "<group>"; };
 		51EF532229409D85007F4F14 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		FAF249732940AB9600D66356 /* MultipleLines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleLines.swift; sourceTree = "<group>"; };
@@ -75,7 +76,6 @@
 		FAF2497D2940AB9600D66356 /* WindlessConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindlessConfiguration.swift; sourceTree = "<group>"; };
 		FAF2497E2940AB9600D66356 /* Constant+Windless.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Constant+Windless.swift"; sourceTree = "<group>"; };
 		FAF2498B2940ABA200D66356 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
-		FAF249952940B29600D66356 /* NotesCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NotesCoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,7 +204,7 @@
 		FAF2498D2940B1F000D66356 /* Core data DB */ = {
 			isa = PBXGroup;
 			children = (
-				FAF249942940B29600D66356 /* UserManageCoreDataModel.xcdatamodeld */,
+				5170C6852940B527005A1208 /* UserManageCoreDataModel.xcdatamodeld */,
 			);
 			path = "Core data DB";
 			sourceTree = "<group>";
@@ -286,8 +286,8 @@
 				5159FC322926385C0053B10E /* UserInfoModel.swift in Sources */,
 				FAF2498A2940AB9600D66356 /* Constant+Windless.swift in Sources */,
 				FAF2497F2940AB9600D66356 /* MultipleLines.swift in Sources */,
-				FAF249962940B29600D66356 /* UserManageCoreDataModel.xcdatamodeld in Sources */,
 				FAF249862940AB9600D66356 /* CAMediaTimingFunction+Windless.swift in Sources */,
+				5170C6872940B527005A1208 /* UserManageCoreDataModel.xcdatamodeld in Sources */,
 				FAF249892940AB9600D66356 /* WindlessConfiguration.swift in Sources */,
 				FAF249852940AB9600D66356 /* AnimationFactory.swift in Sources */,
 				517E7603294074EF0090C033 /* ConnectivityManager.swift in Sources */,
@@ -530,14 +530,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		FAF249942940B29600D66356 /* UserManageCoreDataModel.xcdatamodeld */ = {
+		5170C6852940B527005A1208 /* UserManageCoreDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				FAF249952940B29600D66356 /* NotesCoreDataModel.xcdatamodel */,
+				5170C6862940B527005A1208 /* NotesCoreDataModel.xcdatamodel */,
 			);
-			currentVersion = FAF249952940B29600D66356 /* NotesCoreDataModel.xcdatamodel */;
+			currentVersion = 5170C6862940B527005A1208 /* NotesCoreDataModel.xcdatamodel */;
 			name = UserManageCoreDataModel.xcdatamodeld;
-			path = ../../../../../../Downloads/UserManageCoreDataModel.xcdatamodeld;
+			path = ../UserManageCoreDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

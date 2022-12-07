@@ -253,6 +253,8 @@
 				Base,
 			);
 			mainGroup = 5159FC0F2925F7AA0053B10E;
+			packageReferences = (
+			);
 			productRefGroup = 5159FC192925F7AA0053B10E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";

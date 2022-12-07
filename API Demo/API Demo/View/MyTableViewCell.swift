@@ -15,6 +15,7 @@ class MyTableViewCell: UITableViewCell {
     @IBOutlet weak var ibProfileImageView: LazyImageView!
     @IBOutlet weak var lblUserName: UILabel!
     @IBOutlet weak var lblUserDetailsURL: UILabel!
+    @IBOutlet weak var ibNoteImageView: UIImageView!
     
     private let placeHolder = #imageLiteral(resourceName: "userProfile")
     
@@ -43,5 +44,15 @@ class MyTableViewCell: UITableViewCell {
         }
         self.lblUserName.text = objUserInfoModel?.login ?? ""
         self.lblUserDetailsURL.text = objUserInfoModel?.htmlURL ?? ""
+        
+        if let objNotesCDModel = CoreDataManager.shared.getNote(objUserInfoModel?.login ?? "") {
+            if let userNote = objNotesCDModel.notes, userNote != "" {
+                self.ibNoteImageView.isHidden = false
+            } else {
+                self.ibNoteImageView.isHidden = true
+            }
+        } else {
+            self.ibNoteImageView.isHidden = true
+        }
     }
 }

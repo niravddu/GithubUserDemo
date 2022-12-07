@@ -39,6 +39,7 @@ class UserListViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         NotificationCenter.default.addObserver(self, selector: #selector(statusManager), name: .flagsChanged, object: nil)
+        self.ibTableView.reloadData()
     }
     
     override func viewWillDisappear(_ animated: Bool) {

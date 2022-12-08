@@ -64,7 +64,8 @@ class UserDetailsViewController: UIViewController {
     }
     
     private func themeConfig() {
-        self.ibProfileImageView.layer.cornerRadius = self.ibProfileImageView.frame.width/2
+        //self.ibProfileImageView.layer.cornerRadius = self.ibProfileImageView.frame.width/2
+        self.ibProfileImageView.clipsToBounds = true
         self.txtNotes.layer.cornerRadius = 10
         self.txtNotes.layer.borderWidth = 1
         self.txtNotes.layer.borderColor = UIColor.gray.cgColor
@@ -85,8 +86,8 @@ class UserDetailsViewController: UIViewController {
         self.lblNameTitle.text = "Name:"
         self.lblCompanyTitle.text = "Company:"
         self.lblBlogTitle.text = "Blog:"
-        self.lblFollowersTitle.text = "Followers:"
-        self.lblFollowersTitle.text = "Followers:"
+        self.lblFollowersTitle.text = "Followers"
+        self.lblFollowingTitle.text = "Following"
         self.lblNotesTitle.text = "Notes:"
         
         self.txtNotes.text = CoreDataManager.shared.getNote(self.currentSelectedUserID)?.notes ?? ""

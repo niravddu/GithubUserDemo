@@ -154,14 +154,14 @@ struct UserDetailsModel : Codable {
     }
     
     func getName() -> String {
-        return "Name: " + (self.name ?? "-")
+        return (self.name ?? "-")
     }
     
     func getFollowers() -> String {
-        return "Followers: " + "\((self.followers ?? 0))"
+        return  "\((self.followers ?? 0))"
     }
     
     func getFollowing() -> String {
-        return "Following: " + "\((self.following ?? 0))"
+        return "\((self.following ?? 0))"
     }
 }

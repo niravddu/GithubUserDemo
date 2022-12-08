@@ -40,7 +40,7 @@ class MyTableViewCell: UITableViewCell {
     
     func configMyTableViewCell(_ objUserInfoModel: UserInfoModel?, indexPath: IndexPath) {
         if let profileImageURL = URL(string: objUserInfoModel?.avatarURL ?? "")  {
-            self.ibProfileImageView.loadImage(profileImageURL, placeHolderImage: self.placeHolder, isInvertedImage: (indexPath.row % 4) == 0)
+            self.ibProfileImageView.loadImage(profileImageURL, placeHolderImage: self.placeHolder, isInvertedImage: ((indexPath.row % 3) == 0 && indexPath.row > 0))
         }
         self.lblUserName.text = objUserInfoModel?.login ?? ""
         self.lblUserDetailsURL.text = objUserInfoModel?.htmlURL ?? ""

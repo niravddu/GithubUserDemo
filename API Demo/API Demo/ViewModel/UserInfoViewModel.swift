@@ -81,6 +81,14 @@ class UserInfoViewModel: ObservableObject {
         return tempObjUserInfoModelArray
     }
     
+    func checkOfflineUserDetailsAvailable(_ selecteAtIndex: IndexPath) -> Bool {
+        if let _ = CoreDataManager.shared.getUserDetails(self.objUserInfoModelArray[selecteAtIndex.row].login ?? "") {
+            return true
+        } else {
+            return false
+        }
+    }
+    
     func redirectToUserDetailsView(_ selecteAtIndex: IndexPath) {
         self.currentSelectedUserID = self.objUserInfoModelArray[selecteAtIndex.row].login ?? ""
         self.userViewController.performSegue(withIdentifier: "userDetails", sender: self.userViewController)

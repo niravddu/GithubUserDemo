@@ -29,7 +29,7 @@ struct UserDetailsModel : Codable {
 	let organizationsURL : String?
 	let reposURL : String?
 	let eventsURL : String?
-	let received_eventsURL : String?
+	let receivedEventsURL : String?
 	let type : String?
 	let siteAdmin : Bool?
 	let name : String?
@@ -63,7 +63,7 @@ struct UserDetailsModel : Codable {
 		case organizationsURL = "organizations_url"
 		case reposURL = "repos_url"
 		case eventsURL = "events_url"
-		case received_eventsURL = "received_events_url"
+		case receivedEventsURL = "received_events_url"
 		case type = "type"
 		case siteAdmin = "site_admin"
 		case name = "name"
@@ -99,7 +99,7 @@ struct UserDetailsModel : Codable {
         self.organizationsURL = try values.decodeIfPresent(String.self, forKey: .organizationsURL)
         self.reposURL = try values.decodeIfPresent(String.self, forKey: .reposURL)
         self.eventsURL = try values.decodeIfPresent(String.self, forKey: .eventsURL)
-        self.received_eventsURL = try values.decodeIfPresent(String.self, forKey: .received_eventsURL)
+        self.receivedEventsURL = try values.decodeIfPresent(String.self, forKey: .receivedEventsURL)
         self.type = try values.decodeIfPresent(String.self, forKey: .type)
         self.siteAdmin = try values.decodeIfPresent(Bool.self, forKey: .siteAdmin)
         self.name = try values.decodeIfPresent(String.self, forKey: .name)
@@ -117,6 +117,41 @@ struct UserDetailsModel : Codable {
         self.createdAT = try values.decodeIfPresent(String.self, forKey: .createdAT)
         self.updatedAT = try values.decodeIfPresent(String.self, forKey: .updatedAT)
 	}
+    
+    init(_ login: String?, id: Int?, nodeID: String?, avatarURL: String?, gravatarID: String?, url: String?, htmlURL: String?, followersURL: String?, followingURL: String?, gistsURL: String?, starredURL: String?, subscriptionsURL: String?, organizationsURL: String?, reposURL: String?, eventsURL: String?, receivedEventsURL: String?, type: String?, siteAdmin: Bool?, name: String?, company: String?, blog: String?, location: String?, email: String?, hireable: Bool?, bio: String?, twitterUsername: String?, publicRepos: Int?, publicGists: Int?, followers: Int?, following: Int?, createdAT: String?, updatedAT: String?) {
+        self.login = login
+        self.id = id
+        self.nodeID = nodeID
+        self.avatarURL = avatarURL
+        self.gravatarID = gravatarID
+        self.url = url
+        self.htmlURL = htmlURL
+        self.followersURL = followersURL
+        self.followingURL = followingURL
+        self.gistsURL = gistsURL
+        self.starredURL = starredURL
+        self.subscriptionsURL = subscriptionsURL
+        self.organizationsURL = organizationsURL
+        self.reposURL = reposURL
+        self.eventsURL = eventsURL
+        self.receivedEventsURL = receivedEventsURL
+        self.type = type
+        self.siteAdmin = siteAdmin
+        self.name = name
+        self.company = company
+        self.blog = blog
+        self.location = location
+        self.email = email
+        self.hireable = hireable
+        self.bio = bio
+        self.twitterUsername = twitterUsername
+        self.publicRepos = publicRepos
+        self.publicGists = publicGists
+        self.followers = followers
+        self.following = following
+        self.createdAT = createdAT
+        self.updatedAT = updatedAT
+    }
     
     func getName() -> String {
         return "Name: " + (self.name ?? "-")

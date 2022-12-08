@@ -36,9 +36,6 @@ class UserDetailsViewController: UIViewController {
         self.initViewModel()
         self.themeConfig()
         self.vm?.getUserDetails(self.currentSelectedUserID)
-        self.vm?.reloadData = {
-            self.setData()
-        }
     }
     
     //MARK: - All Actions
@@ -61,6 +58,9 @@ class UserDetailsViewController: UIViewController {
     //MARK: - Self Calling Methods
     private func initViewModel() {
         self.vm = UserDetailsViewModel(self)
+        self.vm?.reloadData = {
+            self.setData()
+        }
     }
     
     private func themeConfig() {

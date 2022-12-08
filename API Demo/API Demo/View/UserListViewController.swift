@@ -129,7 +129,11 @@ extension UserListViewController: UITableViewDelegate, UITableViewDataSource {
         if ConnectivityManager.shared.isInternetAvailable() {
             self.vm?.redirectToUserDetailsView(indexPath)
         } else {
-            self.showAlertView("Alert", message: "Profile details not available for offline ", buttonName: "Ok")
+            if self.vm?.checkOfflineUserDetailsAvailable(indexPath) ?? false {
+                self.vm?.redirectToUserDetailsView(indexPath)
+            } else {
+                self.showAlertView("Alert", message: "Profile details not available for offline ", buttonName: "Ok")
+            }
         }
     }
 }

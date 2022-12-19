@@ -35,14 +35,14 @@ class UserDetailsViewController: UIViewController {
         super.viewDidLoad()
         self.initViewModel()
         self.themeConfig()
-        self.vm?.getUserDetails(self.currentSelectedUserID)
+        self.vm?.getUserDetailsFromDB(self.currentSelectedUserID)
     }
     
     //MARK: - All Actions
     @IBAction func btnSave(_ sender: UIButton) {
         var title = ""
         var message = ""
-        if CoreDataManager.shared.saveNote(self.currentSelectedUserID, notes: self.txtNotes.text) {
+        if CoreDataManager.shared.saveNoteUserWise(self.currentSelectedUserID, notes: self.txtNotes.text) {
             title = "Success"
             message = "Note saved."
         } else {
@@ -90,7 +90,7 @@ class UserDetailsViewController: UIViewController {
         self.lblFollowingTitle.text = "Following"
         self.lblNotesTitle.text = "Notes:"
         
-        self.txtNotes.text = CoreDataManager.shared.getNote(self.currentSelectedUserID)?.notes ?? ""
+        self.txtNotes.text = CoreDataManager.shared.getNoteUserWise(self.currentSelectedUserID)?.notes ?? ""
     }
     
     //MARK: - Segue Method

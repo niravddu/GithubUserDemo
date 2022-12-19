@@ -21,7 +21,7 @@
 		5159FC252925F7AC0053B10E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5159FC242925F7AC0053B10E /* Assets.xcassets */; };
 		5159FC282925F7AC0053B10E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5159FC262925F7AC0053B10E /* LaunchScreen.storyboard */; };
 		5159FC322926385C0053B10E /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5159FC312926385C0053B10E /* UserInfoModel.swift */; };
-		5159FC34292638900053B10E /* UserInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5159FC33292638900053B10E /* UserInfoViewModel.swift */; };
+		5159FC34292638900053B10E /* UserDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5159FC33292638900053B10E /* UserDataViewModel.swift */; };
 		5159FC3629264A6C0053B10E /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5159FC3529264A6C0053B10E /* MyTableViewCell.swift */; };
 		5170C6872940B527005A1208 /* UserManageCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5170C6852940B527005A1208 /* UserManageCoreDataModel.xcdatamodeld */; };
 		517E7603294074EF0090C033 /* ConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517E7602294074EF0090C033 /* ConnectivityManager.swift */; };
@@ -59,7 +59,7 @@
 		5159FC272925F7AC0053B10E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5159FC292925F7AC0053B10E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5159FC312926385C0053B10E /* UserInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoModel.swift; sourceTree = "<group>"; };
-		5159FC33292638900053B10E /* UserInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewModel.swift; sourceTree = "<group>"; };
+		5159FC33292638900053B10E /* UserDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataViewModel.swift; sourceTree = "<group>"; };
 		5159FC3529264A6C0053B10E /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		5170C6862940B527005A1208 /* NotesCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NotesCoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		517E7602294074EF0090C033 /* ConnectivityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectivityManager.swift; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 		51337EDC292764A300365F7F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				5159FC33292638900053B10E /* UserInfoViewModel.swift */,
+				5159FC33292638900053B10E /* UserDataViewModel.swift */,
 				51337EE429278DEC00365F7F /* UserDetailsViewModel.swift */,
 			);
 			path = ViewModel;
@@ -289,7 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5159FC202925F7AA0053B10E /* UserListViewController.swift in Sources */,
-				5159FC34292638900053B10E /* UserInfoViewModel.swift in Sources */,
+				5159FC34292638900053B10E /* UserDataViewModel.swift in Sources */,
 				FAF249822940AB9600D66356 /* Windless.swift in Sources */,
 				5159FC322926385C0053B10E /* UserInfoModel.swift in Sources */,
 				FAF2498A2940AB9600D66356 /* Constant+Windless.swift in Sources */,

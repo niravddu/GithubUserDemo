@@ -21,8 +21,8 @@ class CoreDataManager {
         return container
     }()
     
-    //Get all the notes
-    func getAllUsersList() -> [UserListModel] {
+    //Get all the users list
+    func getAllUsersListFromDB() -> [UserListModel] {
         let objFetchRequest: NSFetchRequest<UserListModel> = UserListModel.fetchRequest()
         do {
             return try self.objPersistentContainer.viewContext.fetch(objFetchRequest)
@@ -31,8 +31,8 @@ class CoreDataManager {
         }
     }
     
-    //Save and update the notes
-    func saveUserListData(_ objUserInfoModel: UserInfoModel) {
+    //Save and update details
+    func saveUserDataFromList(_ objUserInfoModel: UserInfoModel) {
         let objUserListCDModel: UserListModel!
         let objFetchRequest: NSFetchRequest<UserListModel> = UserListModel.fetchRequest()
         objFetchRequest.predicate = NSPredicate(format: "login = %@", argumentArray: [objUserInfoModel.login ?? ""])
@@ -74,7 +74,7 @@ class CoreDataManager {
     }
     
     //Get all the user details
-    func getUserDetails(_ userID: String) -> UserDetailsCDModel? {
+    func getUserDetailsFromDB(_ userID: String) -> UserDetailsCDModel? {
         let objFetchRequest: NSFetchRequest<UserDetailsCDModel> = UserDetailsCDModel.fetchRequest()
         let predicate = NSPredicate(format: "login = %@", argumentArray: [userID])
 
@@ -88,7 +88,7 @@ class CoreDataManager {
     }
     
     //Save and update the user details data
-    func saveUserDetailsData(_ objUserDetailsModel: UserDetailsModel) {
+    func saveUserDetailsDataToDB(_ objUserDetailsModel: UserDetailsModel) {
         let objUserDetailsCDModel: UserDetailsCDModel!
         let objFetchRequest: NSFetchRequest<UserDetailsCDModel> = UserDetailsCDModel.fetchRequest()
         objFetchRequest.predicate = NSPredicate(format: "login = %@", argumentArray: [objUserDetailsModel.login ?? ""])
@@ -145,7 +145,7 @@ class CoreDataManager {
     }
     
     //Get note by user id
-    func getNote(_ userID: String) -> Notes? {
+    func getNoteUserWise(_ userID: String) -> Notes? {
         let objFetchRequest: NSFetchRequest<Notes> = Notes.fetchRequest()
         let predicate = NSPredicate(format: "userID = %@", argumentArray: [userID])
 
@@ -159,7 +159,7 @@ class CoreDataManager {
     }
     
     //Save and update the notes
-    func saveNote(_ userID: String, notes: String) -> Bool {
+    func saveNoteUserWise(_ userID: String, notes: String) -> Bool {
         let objNotesCDModel: Notes!
         let objFetchRequest: NSFetchRequest<Notes> = Notes.fetchRequest()
         objFetchRequest.predicate = NSPredicate(format: "userID = %@", argumentArray: [userID])

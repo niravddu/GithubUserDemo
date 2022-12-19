@@ -19,7 +19,7 @@ class UserDetailsViewModel {
         self.userDetailsController = viewController
     }
     
-    func getUserDetails(_ userID: String) {
+    func getUserDetailsFromDB(_ userID: String) {
         if ConnectivityManager.shared.isInternetAvailable() {
             self.userDetailsController.showLoadingIndicator()
             
@@ -36,12 +36,12 @@ class UserDetailsViewModel {
                 }
                 self.userDetailsController.hideLoadingIndicator()
             }, receiveValue: { UserDetails in
-                CoreDataManager.shared.saveUserDetailsData(UserDetails)
+                CoreDataManager.shared.saveUserDetailsDataToDB(UserDetails)
                 self.objUserDetailsModel = UserDetails
                 self.reloadData!()
             })
         } else {
-            if let objUserDetailsCDModel = CoreDataManager.shared.getUserDetails(userID) {
+            if let objUserDetailsCDModel = CoreDataManager.shared.getUserDetailsFromDB(userID) {
                 self.objUserDetailsModel = self.convertCoreDataModelIntoCodableModel(objUserDetailsCDModel)
             }
             self.userDetailsResult.send()

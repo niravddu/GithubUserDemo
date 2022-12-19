@@ -1,5 +1,5 @@
 //
-//  UserInfoViewModel.swift
+//  UserDataViewModel.swift
 //  GitUsersDemo
 //
 //  Created by Nirav Patel on 20/11/22.
@@ -8,7 +8,7 @@
 import UIKit
 import Combine
 
-class UserInfoViewModel: ObservableObject {
+class UserDataViewModel: ObservableObject {
     
     @Published var objUserInfoModelArray = [UserInfoModel]()
     var cancellable : AnyCancellable?
@@ -23,7 +23,6 @@ class UserInfoViewModel: ObservableObject {
     
     func getUserList(_ isFromStarting: Bool){
         if ConnectivityManager.shared.isInternetAvailable() {
-            //self.userViewController.showLoadingIndicator()
             self.isFetchingUsersList = true
             var lastUserID = "0"
             if isFromStarting {
@@ -46,7 +45,7 @@ class UserInfoViewModel: ObservableObject {
                 self.userViewController.hideLoadingIndicator()
             }, receiveValue: { objUserInfoData in
                 for objUserInfoModel in objUserInfoData {
-                    CoreDataManager.shared.saveUserListData(objUserInfoModel)
+                    CoreDataManager.shared.saveUserDataFromList(objUserInfoModel)
                 }
                 if isFromStarting {
                     self.objUserInfoModelArray = objUserInfoData
@@ -60,7 +59,7 @@ class UserInfoViewModel: ObservableObject {
                 self.isFetchingUsersList = false
             })
         } else {
-            let objUserInfoModelArray = CoreDataManager.shared.getAllUsersList()
+            let objUserInfoModelArray = CoreDataManager.shared.getAllUsersListFromDB()
             if objUserInfoModelArray.count > 0 {
                 self.objUserInfoModelArray = self.convertCoreDataModelIntoCodableModel(objUserInfoModelArray)
                 self.userListResult.send()
@@ -81,8 +80,8 @@ class UserInfoViewModel: ObservableObject {
         return tempObjUserInfoModelArray
     }
     
-    func checkOfflineUserDetailsAvailable(_ selecteAtIndex: IndexPath) -> Bool {
-        if let _ = CoreDataManager.shared.getUserDetails(self.objUserInfoModelArray[selecteAtIndex.row].login ?? "") {
+    func checkOfflineUserDataAvailable(_ selecteAtIndex: IndexPath) -> Bool {
+        if let _ = CoreDataManager.shared.getUserDetailsFromDB(self.objUserInfoModelArray[selecteAtIndex.row].login ?? "") {
             return true
         } else {
             return false

@@ -45,7 +45,7 @@ class MyTableViewCell: UITableViewCell {
         self.lblUserName.text = objUserInfoModel?.login ?? ""
         self.lblUserDetailsURL.text = objUserInfoModel?.htmlURL ?? ""
         
-        if let objNotesCDModel = CoreDataManager.shared.getNote(objUserInfoModel?.login ?? "") {
+        if let objNotesCDModel = CoreDataManager.shared.getNoteUserWise(objUserInfoModel?.login ?? "") {
             if let userNote = objNotesCDModel.notes, userNote != "" {
                 self.ibNoteImageView.isHidden = false
             } else {

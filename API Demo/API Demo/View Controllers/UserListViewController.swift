@@ -15,7 +15,7 @@ class UserListViewController: UIViewController {
     @IBOutlet weak var ibNoInternetContainerView: UIView!
     
     //MARK: - All Properties and Variables
-    fileprivate var vm: UserInfoViewModel?
+    fileprivate var vm: UserDataViewModel?
     fileprivate var refreshControl = UIRefreshControl()
     var cancellable : AnyCancellable?
     
@@ -51,7 +51,7 @@ class UserListViewController: UIViewController {
     
     //MARK: - Self Calling Methods
     private func initViewModel() {
-        self.vm = UserInfoViewModel(self)
+        self.vm = UserDataViewModel(self)
         
         cancellable = vm?.userListResult.sink { completion in
             switch completion {
@@ -129,7 +129,7 @@ extension UserListViewController: UITableViewDelegate, UITableViewDataSource {
         if ConnectivityManager.shared.isInternetAvailable() {
             self.vm?.redirectToUserDetailsView(indexPath)
         } else {
-            if self.vm?.checkOfflineUserDetailsAvailable(indexPath) ?? false {
+            if self.vm?.checkOfflineUserDataAvailable(indexPath) ?? false {
                 self.vm?.redirectToUserDetailsView(indexPath)
             } else {
                 self.showAlertView("Alert", message: "Profile details not available for offline ", buttonName: "Ok")

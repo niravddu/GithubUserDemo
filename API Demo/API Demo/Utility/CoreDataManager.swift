@@ -1,8 +1,8 @@
 //
 //  CoreDataManager.swift
-//  API Demo
+//  GitUsersDemo
 //
-//  Created by Parth Patel on 24/11/22.
+//  Created by Nirav Patel on 24/11/22.
 //
 
 import Foundation

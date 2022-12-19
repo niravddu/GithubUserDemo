@@ -1,6 +1,6 @@
 //
 //  UIImageViewExtension.swift
-//  API Demo
+//  GitUsersDemo
 //
 //  Created by Nirav patel on 06/12/22.
 //

@@ -1,8 +1,8 @@
 //
 //  UIViewControllerExtensions.swift
-//  API Demo
+//  GitUsersDemo
 //
-//  Created by Parth Patel on 18/11/22.
+//  Created by Nirav Patel on 22/11/22.
 //
 
 import UIKit

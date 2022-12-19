@@ -2,7 +2,7 @@
 //  LazyImageView.swift
 //  PracticalTest
 //
-//  Created by Parth Patel on 16/11/22.
+//  Created by Nirav Patel on 22/11/22.
 //
 
 import UIKit
